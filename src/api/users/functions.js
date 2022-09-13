@@ -38,7 +38,7 @@ const signIn = async(req, res) => {
 
 const createUser = async(req, res) => {
 
-    const {user, password} = req.body;
+    const {user, password, userType} = req.body;
 
     const existingUser = User.exists({user});
 
@@ -53,6 +53,7 @@ const createUser = async(req, res) => {
     const newUser = new User({
         user,
         password: hashPassword,
+        userType
     });
 
     const userCreated = await newUser.save();
