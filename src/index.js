@@ -20,7 +20,7 @@ app.use(express.json({ extended: false}));
 app.use(cookieParser());
 app.use(cors(corsOptions));
 
-app.use('/stock', require('./api/stock/routes'))
+app.use('/stores', require('./api/stores/routes'))
 
 db.connection().then(mongo => {
     app.listen(port, () => {
