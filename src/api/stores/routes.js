@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {prueba} = require('./functions.js')
+const {getAllStores} = require('./functions.js')
 
-router.get('/', prueba);
+router.get('/', getAllStores);
 
 module.exports = router;
