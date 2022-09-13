@@ -30,7 +30,7 @@ const signIn = async(req, res) => {
 
     const token = createJWT(info);
 
-    res.status(204).json({
+    res.status(200).json({
         data: token
     })
 };
