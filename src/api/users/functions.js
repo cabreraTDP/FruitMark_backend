@@ -59,7 +59,7 @@ const createUser = async(req, res) => {
     const userCreated = await newUser.save();
 
     res.status(200).json({
-        userCreated
+        userID: userCreated._id
     });
 }
 
