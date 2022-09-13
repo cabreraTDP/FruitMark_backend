@@ -21,6 +21,7 @@ app.use(cookieParser());
 app.use(cors(corsOptions));
 
 app.use('/stores', require('./api/stores/routes'))
+app.use('/users', require('./api/users/routes'))
 
 db.connection().then(mongo => {
     app.listen(port, () => {
