@@ -55,10 +55,10 @@ const createUser = async(req, res) => {
         password: hashPassword,
     });
 
-    const user = await newUser.save();
+    const userCreated = await newUser.save();
 
     res.status(200).json({
-        user 
+        userCreated
     });
 }
 
