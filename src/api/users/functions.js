@@ -40,10 +40,10 @@ const createUser = async(req, res) => {
 
     const {user, password, userType} = req.body;
 
-    const existingUser = User.exists({user});
+    const existingUser = await User.exists({user});
 
     if(existingUser){
-        res.status(400).json({
+        return res.status(400).json({
             error: 'User already exists.' 
         });
     };
