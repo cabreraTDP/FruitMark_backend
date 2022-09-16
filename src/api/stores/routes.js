@@ -4,6 +4,6 @@ const router = express.Router();
 const {getAllStores, sendStockAmongStores} = require('./functions.js')
 
 router.get('/', getAllStores);
-router.get('/transfer',authenticate,sendStockAmongStores);
+router.post('/transfer',authenticate,sendStockAmongStores);
 
 module.exports = router;
